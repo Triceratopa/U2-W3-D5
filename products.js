@@ -29,7 +29,7 @@ return res.json()
     arrProducts.forEach(card => {
         const newCol=document.createElement('div')
         newCol.classList.add('col','col-12','col-md-6','col-lg-4')
-        const imageUrl=card.imageUrl? card.imageUrl: './shocked-pikachu.jpg'
+       
         newCol.innerHTML=`<div class="card" >
   <img src="${card.imageUrl}" class="card-img-top" alt="...">
   <div class="card-body">
@@ -37,7 +37,8 @@ return res.json()
     <p class="card-text">${card.description}</p>
     <p class="card-text">${card.brand}</p>
     <p class="card-text">€${card.price}</p>
-    <a href="./details.html" class="btn btn-primary">Modifica</a>
+    <a href="./details.html?id=${card._id}" class="btn btn-primary">Modifica</a>
+    <a href="./details.html" class="btn btn-primary">Elimina</a>
   </div>
 </div>
         `

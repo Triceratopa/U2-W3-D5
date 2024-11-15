@@ -23,7 +23,15 @@ const descriptionInput =document.getElementById('description')
 const brandInput =document.getElementById('brand')
 const imgInput =document.getElementById('img')
 const priceInput =document.getElementById('price')
-const imageUrl=imgInput.value()!==''?imgInput.value:'https://a.pinatafarm.com/960x960/0c4d64b259/shocked-pikachu.jpg'
+const defaultImg='https://a.pinatafarm.com/960x960/0c4d64b259/shocked-pikachu.jpg'
+
+if (imgInput.value === '') {
+    imgInput.value= defaultImg;
+} else {
+    imgInput.value = imgInput.value;
+}
+
+
 const createdCard= new Card(nameInput.value,descriptionInput.value,brandInput.value,imgInput.value,priceInput.value)
 console.log(createdCard)
 fetch(url_project,{
