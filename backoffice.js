@@ -34,7 +34,7 @@ if (imgInput.value === '') {
 
 const createdCard= new Card(nameInput.value,descriptionInput.value,brandInput.value,imgInput.value,priceInput.value)
 console.log(createdCard)
-fetch(url_project,{
+fetch(`${url_project}${productId}`,{
     method: 'POST',
     body: JSON.stringify(createdCard),
     headers:{

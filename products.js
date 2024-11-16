@@ -7,7 +7,7 @@ const url_project='https://striveschool-api.herokuapp.com/api/product/'
 
 
 const getProducts=function(){
-    fetch(url_project,{
+    fetch(`${url_project}${productId}`,{
         headers:{
             'Content-Type': 'application/json',
             Authorization: api_key
@@ -38,7 +38,7 @@ return res.json()
     <p class="card-text">${card.brand}</p>
     <p class="card-text">€${card.price}</p>
     <a href="./details.html?id=${card._id}" class="btn btn-primary">Modifica</a>
-    <a href="./details.html" class="btn btn-primary">Elimina</a>
+    <a href="./HomePage.html" class="btn btn-primary">Elimina</a>
   </div>
 </div>
         `
