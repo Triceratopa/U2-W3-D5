@@ -1,6 +1,6 @@
 const api_key = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzM3MWQ2ZThhZDEyOTAwMTU4NzZjMmUiLCJpYXQiOjE3MzE2NzczMDMsImV4cCI6MTczMjg4NjkwM30.Z_LwsaFvx8XZH1MF12X-ItpE24G_JC_eprm7wJuKddM"
-const url_project = "https://striveschool-api.herokuapp.com/api/product/";
-const cardId = new URLSearchParams(window.location.search).get('id');
+const url_project = "https://striveschool-api.herokuapp.com/api/product/"
+const cardId = new URLSearchParams(window.location.search).get('id')
 
 
 const getProductDetails =function() {
@@ -12,7 +12,7 @@ const getProductDetails =function() {
             return res.json()
         }else{ throw new Error()}})
         .then((card) => {
-            const modifyCard = document.getElementById('modifyCard');
+            const modifyCard = document.getElementById('modifyCard')
             modifyCard.innerHTML = `
                 <form id="updateForm">
                     <div class="mb-3">
@@ -40,12 +40,12 @@ const getProductDetails =function() {
             `
         
             
-            document.getElementById('updateForm').addEventListener('submit', updateProduct);
+            document.getElementById('updateForm').addEventListener('submit', updateProduct)
         })
         
        
     .catch ((err)=> {
-        console.error('Errore:', err);
+        console.error('Errore:', err)
     })
 }
 
